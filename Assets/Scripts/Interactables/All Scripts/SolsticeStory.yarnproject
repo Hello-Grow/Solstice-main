@@ -1,0 +1,25 @@
+﻿{
+    "projectFileVersion": 4,
+    "sourceFiles": [
+        "**/*.yarn"
+    ],
+    "excludeFiles": [
+        "**/*~/*",
+        "./Samples/Yarn Spinner*/*"
+    ],
+    "localisation": {},
+    "baseLanguage": "en",
+    "compilerOptions": {
+        "diagnosticsSeverity": {}
+    },
+    "editorOptions": {
+        "yarnScriptEditor": {
+            "projectGraphPositions": {
+                "ConstructionWorker.yarn": {
+                    "x": 12,
+                    "y": 12
+                }
+            }
+        }
+    }
+}

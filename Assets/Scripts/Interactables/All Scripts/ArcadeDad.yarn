@@ -1,0 +1,58 @@
+title: ArcadeDad
+---
+<<declare $Dad_interaction_count = 0>>
+
+<<if $Dad_interaction_count == 0>>
+  Hana's Dad: Hey, kid. You heard the news?
+  -> Yeah, of course.
+  -> What news?
+    Hana's Dad: Haha. Good one.
+  Hana's Dad: My little girl is having fun in the arcade right now. Hana.
+  <<if $arcade_girl_interaction_times == 0>>
+    Hana's Dad: We lost her mother a couple years ago. She's a good kid... I don't want to tell her the world is ending.
+    -> That makes sense.
+    -> You should tell her.
+    Hana's Dad: Yeah. I just don't her to be sad in her last moments.
+    Hana's Dad: Hey, could you talk to her? I want to make sure she's enjoying the arcade.
+    -> Sure!
+    -> I'll see what I can do.
+  <<elseif $arcade_girl_interaction_times == 1>>
+    You: Oh, I talked to her earlier. She's a really sweet kid!
+    Hana's Dad: She is. We lost her mother a couple years ago. She's a good kid... I don't want to tell her the world is ending.
+    -> That makes sense.
+    -> You should tell her.
+    Hana's Dad: Yeah. I just don't her to be sad in her last moments.
+    Hana's Dad: Was she enjoying the arcade?
+    You: Yeah, she was.
+    Hana's Dad: I'm glad.
+  <<set $Dad_interaction_count += 1>>
+  <<endif>>
+
+<<elseif $Dad_interaction_count >= 1 and $arcade_girl_interaction_times != 2>>
+  Hana's Dad: Have you talked to Hana?
+  <<if $arcade_girl_interaction_times == 1>>
+    You: Yeah, she's playing the claw machine!
+  <<elseif $arcade_girl_interaction_times == 0>>
+    You: Not yet!
+  <<endif>>
+
+<<elseif $arcade_girl_interaction_times == 2>>
+  Hana's Dad: I saw you talking to my little girl. Thanks for helping her with the claw machine.
+  -> Happy to do so!
+  -> It was no problem.
+  You: She's a really sweet kid. She used all her tokens to get the bunny for you.
+  Hana's Dad: I know… I was always so scared I wouldn't be able to give her a good life after my wife passed.
+  Hana's Dad: But she's so happy now.
+  -> You did a good job.
+  -> I think you have nothing to worry about.
+  Hana's Dad: Thanks, kid. You know, I think I'll tell her about the world ending. She deserves to know.
+  You: You should spend these last minutes with her.
+  Hana's Dad: You're right. I should.
+  Hana's Dad: Thanks again, kid. I hope your last minutes are special too.
+  You: Thanks.
+<<else>>
+  Hana's Dad: Thanks again, kid. I hope your last minutes are special too.
+  You: Thanks.
+<<endif>>
+
+===

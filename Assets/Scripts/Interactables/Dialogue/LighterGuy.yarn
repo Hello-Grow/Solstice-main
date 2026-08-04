@@ -1,0 +1,9 @@
+title: LighterGuy
+---
+Lighter Guy: Hey kid, want a lighter?
+->Hell yeah!
+ Lighter Guy: Amazing kid.
+ <<set $lighter to 1>>
+->Hell nah!
+ Lighter Guy: Why u gotta be such a party pooper?
+===

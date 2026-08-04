@@ -1,0 +1,18 @@
+﻿title: VendingMachine
+---
+<<declare $monster_cans = 0>>
+<<if $monster_cans == 0>>
+  A vending machine full of Monster Energy drinks. You have enough money for one. 
+  Would you like the purchase a Monster?
+  -> Yes
+    <<PlaySoundAndWait InteractionManager "Vending Machine Dispense" 1.5>>
+    <<PlaySoundAndWait InteractionManager "Vending Machine Can Drop" 1>>
+    <<PlaySound InteractionManager "Pickup">>
+    You got a Monster!
+    <<set $monster_cans += 1>>
+  -> No
+<<elseif $monster_cans == 1>>
+  A vending machine full of your favorite drinks. Sadly, you cannot afford anything.
+<<endif>>
+
+===

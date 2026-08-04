@@ -1,0 +1,13 @@
+﻿title: ParkPond
+---
+There is a pond of ducks.
+<<if $numberOfToast> 0>>
+ Do I want to feed them my toast?
+ -> Yes
+  They seemed to like it.
+  <<set $numberOfToast -=1>>
+ -> No
+<<else>>
+ Maybe I could feed them some toast.
+<<endif>>
+===

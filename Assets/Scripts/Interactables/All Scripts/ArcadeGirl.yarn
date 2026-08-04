@@ -1,0 +1,34 @@
+title: Hana
+---
+<<declare $arcade_girl_interaction_times = 0>>
+
+<<if $arcade_girl_interaction_times == 0>>
+  Hana: Hi hi hi! Can you help me?
+  -> Sure!
+    Hana: Yay! Thank you so much!
+    Hana: I really want to get the pink bunny in the machine for my daddy. He's outside waiting for me. He has been really sad today.
+    Hana: But the claw keeps dropping it, and I only have two tokens left. Can you please try? Here!
+    You gained two tokens.
+    <<set $arcade_girl_interaction_times += 1>>
+  -> Oh, I don't know...
+    Hana: Pleaseeeee?
+    Hana: I really want to get the pink bunny in the machine for my daddy. He's outside waiting for me. He has been really sad today.
+    Hana: But the claw keeps dropping it, and I only have two tokens left. Can you please try? Here!
+    <<PlaySound InteractionManager "Pickup">>
+    You gained two tokens.
+    <<set $arcade_girl_interaction_times += 1>>
+<<elseif $arcade_girl_interaction_times == 1>>
+  Hana: Did you get the bunny yet?
+  <<if $has_bunny>>
+    You: I got the bunny!
+    Hana: Thank you thank you thank you! I hope my daddy stops being sad.
+    Hana: I'm going to find him now! Bye bye! See you later!
+    <<set $arcade_girl_interaction_times = 2>>
+  <<else>>
+    You: Not quite yet...
+    Hana: Aww, that's okay! My daddy always says you can try again!
+  <<endif>>
+<<else>>
+  Hana: Thanks for helping me out!
+<<endif>>
+===

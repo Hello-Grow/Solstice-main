@@ -1,0 +1,31 @@
+title: Yuki
+---
+<<declare $grandma_interaction_times = 0>>
+
+<<if $grandma_interaction_times == 0>>
+  Yuki: Hello, dear. It's such a beautiful evening. A perfect time to write a wish.
+  -> A wish? But… the world is ending!
+    Yuki: Even more reason to write one then.
+    Yuki: Your life, your dream, your love... it doesn't end. It just changes form. 
+  -> I'd love to write one!
+  Yuki: Write your wish, dear. Hang it on the tree! it will be carried on to wherever it needs to go
+  <<set $grandma_interaction_times += 1>>
+<<elseif $grandma_interaction_times == 1>>
+  Yuki: Do you have any regrets, my dear?
+  -> Yeah…
+    You: There are lots of things I could have done. And now I can't…
+    Yuki: Do not worry, dear. There will always be more you could have done.
+    Yuki: Learn to let go of your regrets. Don't let them chain you down.
+  -> Not really.
+    Yuki: It is a great fortune to have lived a life with no regrets, my dear.
+  <<set $grandma_interaction_times += 1>>
+<<elseif $grandma_interaction_times == 2>>
+  Yuki: You know, this cherry blossom was just a wee sprout when I was a little girl.
+  Yuki: People tried to cut it down many, many times, but it came back every time.
+  Yuki: This sunset is just one of many. You, too, will bloom again.
+<<else>>
+  Yuki: This tree has seen the stories of thousands of people come and go.
+  Yuki: What will your story be?
+<<endif>>
+
+===

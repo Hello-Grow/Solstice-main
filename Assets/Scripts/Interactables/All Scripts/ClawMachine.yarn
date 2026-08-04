@@ -1,0 +1,24 @@
+﻿title: ClawMachine
+---
+<<declare $claw_interaction_times = 0>>
+<<declare $has_bunny = false>>
+It's a claw machine.
+You swear it's rigged, yet you still don't have evidence to prove it.
+Play?
+
+-> Yes
+ <<if $claw_interaction_times ==2>>
+  You ran out of tokens.
+ <<else>>
+  <<DoClawMachine ArcadeClawMachine>>
+  <<if $claw_interaction_times ==0>>
+   It's so hard to win at these.    
+  <<set $claw_interaction_times = 1>>
+  <<else>>
+   <<set $has_bunny = true>>
+   <<PlaySound InteractionManager "Pickup">>
+   You won a pink bunny!
+  <<endif>>
+ <<endif>>
+-> No
+===

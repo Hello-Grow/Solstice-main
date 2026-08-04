@@ -1,0 +1,17 @@
+﻿title: CatPainting
+---
+<<declare $cat_painting_interaction_times = 0>>
+
+<<if $cat_painting_interaction_times == 0>>
+ It's a painting of a cat.
+ Something about the way the colors interact makes it seem like the cat is almost glowing.
+ <<set $cat_painting_interaction_times = 1>>
+<<elseif $cat_painting_interaction_times == 1>>
+ Looking at it again it seems as if the cat was in fact, not glowing. 
+ You feel disheartened by this information.
+ <<set $cat_painting_interaction_times = 2>>
+<<else>>
+ Looking one final time, you decide that the cat, while not glowing, is radiating in your heart. 
+ You will remember this cat. 
+<<endif>>
+===

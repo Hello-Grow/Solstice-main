@@ -1,0 +1,12 @@
+﻿title: BookShelf
+---
+<<declare $bookshelf_interaction_times = 0>>
+<<if $bookshelf_interaction_times==1>>
+ A bookshelf full of familiar books.
+ You've read each of them time and time again.
+ For some reason, now doesn't seem to be the best time.
+ <<set $bookshelf_interaction_times = 1>>
+<<else>>
+ A bookshelf.
+<<endif>>
+===

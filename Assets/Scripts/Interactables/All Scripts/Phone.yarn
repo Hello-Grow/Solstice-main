@@ -1,0 +1,16 @@
+﻿title: Phone
+---
+Your Phone.
+// <<declare $phone_interaction_times = 0>>
+// <<if $phone_interaction_times == 0>>
+//  It looks like there's some notifications on your phone.
+//  Check it?
+//  -> Yes
+//   <<Phone PhoneUI>>
+//  -> No
+//  You place down your phone.
+//  <<set $phone_interaction_times = 1>>
+// <<else>>
+//  The messages seemed to have stopped.
+// <<endif>>
+===

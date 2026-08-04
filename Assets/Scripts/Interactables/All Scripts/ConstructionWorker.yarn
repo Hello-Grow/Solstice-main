@@ -1,0 +1,38 @@
+title: Tanakah
+---
+<<declare $tanakah_interaction_count = 0>>
+
+<<if $tanakah_interaction_count == 0>>
+ You: Hey Tanakah, how are you today?
+ Tanakah: I'm going good! Just got off work.
+ You: The people on TV are talking about the world ending. So everything will just be... gone?
+ Tanakah: Yeah, I guess. It all ends someday kiddo...
+ Tanakah: Y'know, I'd always thought it'd be loud or somethin'. Wars, bombs. That sorta thing. 
+ Tanakah: But it's so quiet, like the world is just sighin'.
+ Tanakah: Anyway, no time to waste now! Go off and see the world for the last time.
+ Tanakah: If you find anything of sentimental value to others, I would love to see it.
+ Tanakah: Or toast. I would also love toast.
+ <<set $tanakah_interaction_count +=1>>
+<<elseif $tanakah_interaction_count == 1>>
+ <<if $numberOfToast> 0>>
+  Give Tanakah toast?
+  -> Yes
+   You: Here, Tanakah! I made some fresh toast!
+   Tanakah: Thanks, kiddo.
+   // toast crunch sfx
+   Tanakah: That's some good toast.
+   <<set $numberOfToast -= 1>>
+  -> No
+ <<elseif $has_plant>>
+  Give Haruka's plant to Tanakah?
+  -> Yes
+   You: Hey, Tanakah. Haruka gave me this succulent to give to someone. Would you like it?
+   Tanakah: Of course, kiddo! That was so kind of Haruka.
+  -> No
+  <<set $gave_plant = true>>
+ <<else>>
+  Tanakah: No time to waste now, kiddo! Go off and see the world for the last time.
+ <<endif>>
+<<endif>>
+
+===

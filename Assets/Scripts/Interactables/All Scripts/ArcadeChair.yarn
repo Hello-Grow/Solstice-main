@@ -1,0 +1,12 @@
+﻿title: ArcadeChair
+---
+<<declare $arcade_chair_interaction_times = 0>>
+<<if $arcade_chair_interaction_times==0>>
+ It's a chair, arcade edition!
+ You realize that there have been no other chairs up to this point.
+ Would this make the Arcade variant the original then?
+ <<set $arcade_chair_interaction_times = 1>>
+<<else>>
+ The philosophy of originals and copies overwhelms you.
+<<endif>>
+===

@@ -1,0 +1,11 @@
+﻿title: Dog
+---
+There's a dog in the park.
+Pet it?
+-> Yes
+ <<PetDog Dog>>
+ <<PlaySound InteractionManager "Dog Bark">>
+ The Dog seems happy.
+-> No
+ I'd rather leave it alone.
+===

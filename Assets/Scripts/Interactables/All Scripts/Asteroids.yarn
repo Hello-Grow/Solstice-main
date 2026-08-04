@@ -1,0 +1,8 @@
+﻿title: Asteroids
+---
+It's an arcade machine displaying a superior off-shoot of the game "Asteroids". 
+Play?
+-> Yes.
+ <<EnableGame AsteroidsArcadeMachine>>
+-> I have better things to do.
+===

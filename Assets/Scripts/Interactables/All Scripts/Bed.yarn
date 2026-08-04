@@ -1,0 +1,18 @@
+﻿title: Bed
+---
+<<declare $bed_state = 0>>
+
+<<if $bed_state == 0>>
+    Your very own resting place.
+    For some reason, you felt as if it were not the best time to sleep.
+    <<set $bed_state = 1>>
+<<else>>
+    Your bed.
+    Would you like to make it?
+    -> Yes
+        <<make_bed BedApartment>>
+        You made your bed swiftly.
+        It felt nice.
+    -> No
+<<endif>>
+===

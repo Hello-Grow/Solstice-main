@@ -1,0 +1,44 @@
+
+title: PlantLady
+---
+<<declare $plantLady_interaction_times = 0>>
+<<declare $gave_plant = false>>
+<<declare $has_plant = false>>
+
+<<if $plantLady_interaction_times == 0>>
+  Haruka: Oh, neighbor! I'm glad I ran into you.
+  Haruka: We've never really talked to each other, but I've always meant to show you my plants!
+  -> Your plants?
+  -> I'd love to see them!
+    Haruka: I'd love to show you! There are so many now that I don't think you'd be able to see them all though.
+  Haruka: I started growing them a while ago with a little succulent, and then I just couldn't stop.
+  Haruka: I always wanted to give you one of my plants. But I was never brave enough to knock on your door.
+  Haruka: Here, take it with you. I'm glad I could finally give it to you.
+  -> Thank you so much!
+  -> I can't take this...
+    Haruka: No, I insist.
+  <<PlaySound InteractionManager "Pickup">>
+  You got a plant from Haruka!
+  Haruka: Maybe you could give it to someone else who needs it. I'd love for you to share my love further.
+  Haruka: If you had any plant of your own, I would also love to meet it!
+  <<set $has_plant = true>>
+  <<set $plantLady_interaction_times = 1>>
+<<elseif $plantLady_interaction_times >= 1 and $has_tomatoes>>
+  You: Haruka! I found this plant in my apartment. Would you like to have it?
+  Haruka: Cherry tomatoes! I'd love to.
+  -> I'm glad you can take care of it.
+  -> Wait... tomatoes?
+    You: I never got any tomatoes from it...
+    Haruka: Tomatoes are a tricky bunch. Staying indoors might have made it shy.
+  Haruka: I'll make sure it's happy! Thank you so much! 
+  <<set $has_tomatoes = false>>
+<<elseif $plantLady_interaction_times >= 1 and $gave_plant>>
+  You: Haruka! I gave the plant to Tanakah. He really liked it.
+  Haruka: That makes me so happy. Thank you for spreading my love.
+  <<set $gave_plant = false>>
+<<else>>
+  Haruka: Hi, neighbor! I hope you find joy in the plants.
+<<endif>>
+
+===
+

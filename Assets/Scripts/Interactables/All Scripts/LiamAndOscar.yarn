@@ -1,0 +1,70 @@
+﻿title: LiamAndOscar
+---
+<<declare $LiamAndOscar_interaction_times = 0>>
+<<declare $LiamAndOscar_fun = false>>
+<<declare $LiamAndOscar_ducks = false>>
+
+<<if $LiamAndOscar_interaction_times == 0>>
+  You: Hey, guys.
+  Oscar: Hey. Hi. Oh my god. The world is ending. The world is ending.
+  You: Uhh, is he okay?
+  Liam: Not... really?
+  Oscar: Okay? Nothing is okay! The world is ending and I haven't even done everything yet!
+  Liam: Chill out, man! You don't need to do everything. Just have some fun! Let's sing a song!
+  Oscar: Liam, we don't have time for songs. We gotta spend these last five minutes RIGHT.
+  -> I think you guys should just have fun.
+    Oscar: ...You really think so?
+    You: Yeah. There's only so much time left. Don't spend it worrying!
+    Liam: Heck yeah! Listen to this beat, Oscar. It's super super good!
+    Liam: <i>Starts beatboxing.</i>
+    Oscar: <i>Tentatively joins beatboxing.</i>
+    Oscar: I guess this is pretty fun...
+    You: I think this will be a really good song. Good luck!
+    <<set $LiamAndOscar_fun = true>>
+  -> I think you guys should try to find meaning before the end.
+    Liam: Okay. But how would we do that?
+    You: Talk to your family and friends. Think about the things you love.
+    You: There's meaning all around you. Don't worry too much about the perfect end.
+    Oscar: Hmm... You know, growing up my friends and I always ran around playing silly games.
+    Oscar: We used to pretend we were ducks. I really miss being so carefree.
+    Liam: We can be ducks now! QUACK! Come on, give it a try!
+    Oscar: Quack.
+    Liam: You gotta put more gusto behind it. QUACK!
+    Oscar: QUACK!
+    You: Have fun being ducks, guys!
+    Liam: QUACK!
+    <<set $LiamAndOscar_ducks = true>>
+  <<set $LiamAndOscar_interaction_times = 1>>
+<<elseif $LiamAndOscar_interaction_times == 1>>
+  <<if $LiamAndOscar_fun>>
+    Liam: Hey, do you want to hear the song we wrote?
+    -> Of course!
+    -> Um... maybe not.
+      Liam: Come on, man! Don't be such a downer.
+    Oscar: Here we go! 5, 6! 5, 6, 7, 8!
+    Liam: Time monster blows away!
+    Oscar: Marshmallows eat someone today!
+    You: Wow... That sounds... great...
+  <<elseif $LiamAndOscar_ducks>>
+    Oscar: QUACK QUACK QUACK!
+    Liam: QUACK QUACK QUACK!
+    You: Hey, guys. How's the meaning finding going?
+    Liam: Oh, I completely forgot about that.
+    Oscar: Yeah, me too. But I think we were able to reconnect with our sense of childhood wonder.
+    You: That's great to hear!
+    Liam: Yep! It's super super good! QUACK!
+    Oscar: QUACK!
+    You: QUACK!
+  <<endif>>
+  <<set $LiamAndOscar_interaction_times += 1>>
+<<else>>
+  <<if $LiamAndOscar_fun>>
+    Liam: Time monster blows away!
+    Oscar: Marshmallows eat someone today!
+  <<elseif $LiamAndOscar_ducks>>
+    Oscar: QUACK QUACK QUACK!
+    Liam: QUACK QUACK QUACK!
+  <<endif>>
+<<endif>>
+
+===

@@ -1,0 +1,15 @@
+title: WishingTree
+---
+<<declare $wishing_tree_interaction_times = 0>>
+<<if $wishing_tree_interaction_times==0>>
+ You: There's a wishing tree here.
+ You: Want to leave a note?
+ -> Yes
+  <<WishingSlip WishingSlipUI>>
+  You: May the slip find another in another life.
+  <<set $wishing_tree_interaction_times = 1>>
+ -> No
+<<else>>
+ You: May the slip find another in another life.
+<<endif>>
+===

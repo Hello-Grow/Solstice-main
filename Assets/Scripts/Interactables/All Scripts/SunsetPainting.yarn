@@ -1,0 +1,16 @@
+﻿title: SunsetPainting
+---
+<<declare $sunset_painting_interaction_times = 0>>
+<<if $sunset_painting_interaction_times==0>>
+ It's a painting of the sunset.
+ Something about the way the colors interact makes it seem like the sun is almost glowing.
+ <<set $sunset_painting_interaction_times = 1>>
+<<elseif $sunset_painting_interaction_times==1>>
+ You remember when the painting was first installed.
+ A town known for its beautiful sunsets, localizing it into a painting.
+ You wondered at the time why look at a picture rather than just going outside.
+ <<set $sunset_painting_interaction_times = 2>>
+<<else>>
+ It's a painting of the sunset.
+<<endif>>
+===

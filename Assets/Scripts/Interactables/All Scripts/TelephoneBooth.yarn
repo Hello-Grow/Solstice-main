@@ -1,0 +1,17 @@
+﻿title: TelephoneBooth
+---
+<<declare $telephone_booth_interaction_times = 0>>
+<<if $telephone_booth_interaction_times==0>>
+ A traditional telephone booth.
+ You recall how it hasn't worked in years.
+ You repress the urge to try anyways.
+ <<set $telephone_booth_interaction_times = 1>>
+<<elseif $telephone_booth_interaction_times==1>>
+ Call someone in the phone booth?
+ bzzt!! 
+ The phone gives you nothing but static.
+ <<set $telephone_booth_interaction_times = 2>>
+<<else>>
+ A phone booth!
+<<endif>>
+===

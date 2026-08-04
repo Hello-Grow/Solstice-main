@@ -1,0 +1,26 @@
+﻿title: ParkKaito
+---
+
+<<declare $ParkKaito_interaction_times = 0>>
+
+<<if $ParkKaito_interaction_times == 0>>
+  Kaito: Hey. So I guess this is the park.
+  -> Looks like a park to me.
+  -> It's nice, right?
+  Kaito: Yeah, it's pretty cool. I like the ducks.
+  Kaito: The old lady over there had me write a wish to put in the tree.
+  You: What did you write?
+  Kaito: At first I didn't really know. But then I started remembering why I used to care about things.
+  Kaito: My little brother. He was always such a bundle of joy. Then he got cancer, and...
+  Kaito: After I saw someone like him suffer so much, I lost the will to care. I didn't see the point.
+  Kaito: I wrote that I hope to see him again, after the world ends.
+  -> I hope you do.
+  -> I'm sure you'll find him.
+  Kaito: Thanks, man.
+  <<set $ParkKaito_interaction_times = 1>>
+<<else>>
+  Kaito: You know, this sunset's not a bad way to go.
+<<endif>>
+
+
+===

@@ -1,0 +1,25 @@
+﻿title: Toaster
+---
+<<declare $toastInToaster = false>>
+<<declare $numberOfToast = 0>>
+<<if $toastInToaster>>
+ You: Do I want to grab the toast?
+ -> Yes
+  <<PlaySound InteractionManager "Ouchie">>
+  You: Ouch it burns!
+  <<take_toast ToasterApartment>>
+  <<PlaySound InteractionManager "Pickup">>
+  You: I got toast.
+  <<set $toastInToaster = false>>
+  <<set $numberOfToast +=1>>
+ -> No
+<<else>>
+You: Do I want to make some toast?
+ ->Yes
+  <<PlaySound InteractionManager "Toaster">>
+  <<toast ToasterApartment>>
+  <<set $toastInToaster = true>>
+ ->No
+  You: I don't think I'm hungry right now.
+<<endif>>
+===

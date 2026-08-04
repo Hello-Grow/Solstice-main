@@ -1,0 +1,21 @@
+﻿title: LobbyPlant
+---
+<<declare $lobby_plant_interaction_times = 0>>
+<<if $lobby_plant_interaction_times==1>>
+ It's another plant!
+ Yours is highly superior.
+ <<set $lobby_plant_interaction_times += 1>>
+<<elseif $lobby_plant_interaction_times==2>>
+ The plant now looks insulted.
+ Would you like to apologize?
+ -> Yes
+  It seems to be satisfied.
+  You're filled with the power of apologizing to plants.
+ -> No
+  It seems to be growing murderous intent.
+  You're filled with the power of being rivals with a plant.
+ <<set $lobby_plant_interaction_times += 1>>
+<<else>>
+ It's another plant!
+<<endif>>
+===

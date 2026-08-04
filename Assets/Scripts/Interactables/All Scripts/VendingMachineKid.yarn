@@ -1,0 +1,26 @@
+title: VendingMachineKid
+---
+<<declare $vendingmachinekid_interaction_times = 0>>
+
+<<if $vendingmachinekid_interaction_times == 0>>
+  You: Hey, how are you doing?
+  John: I'm doing pretty good.
+  John: I wanted a Monster before the end, but I'm pretty broke.
+  You: You know, I got this Monster tower in my room I should complete. I only need one more.
+  You: If you give me your empty can, I'll buy you a Monster.
+  John: Really, bro? Thanks!
+  <<set $vendingmachinekid_interaction_times = 1>>
+<<else>>
+  <<if $monster_cans == 1>>
+   You: I bought you a Monster!
+   John: Thanks, bro!
+   John: Here's the can for your Monster tower.
+   <<PlaySound InteractionManager "Pickup">>
+   You got an empty monster can!
+   <<set $monster_inventory_count += 1>>
+  <<else>>
+   John: Did you buy the Monster?
+  <<endif>>
+<<endif>>
+
+===

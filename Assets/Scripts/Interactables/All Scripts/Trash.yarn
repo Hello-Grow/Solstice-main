@@ -1,0 +1,11 @@
+﻿title: Trash
+---
+<<declare $trash_interaction_times = 0>>
+<<if $trash_interaction_times == 0>>
+A trash can. Beautiful.
+<<set $trash_interaction_times = 1>>
+<<else>>
+A trash can.
+You shed a tear from the beauty.
+<<endif>>
+===

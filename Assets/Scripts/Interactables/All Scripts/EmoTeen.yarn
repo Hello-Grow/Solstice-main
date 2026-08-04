@@ -1,0 +1,52 @@
+title: Kaito
+---
+<<declare $KaitoScore = 0>>
+<<set $KaitoScore to random_range(500, 1000) >>
+<<declare $PlayerScore = 0>>
+<<declare $kaito_interaction_times = 0>>
+
+<<if $kaito_interaction_times == 0>>
+  Kaito: Hey. You here to play one last game of Plasteroids?
+  -> I'm just walking around.
+    You: I'm just walking around.
+    You: Seeing things before the end.
+    Kaito: Seeing things? Right. What's the point? It's all going blank.
+	  -> You don't care?
+      You: You don't care?
+      Kaito: I cared once. I used to care a lot.
+      Kaito: Sometimes I forgot what I was even caring for.
+      Kaito: Eventually, you run out of energy for that kind of stuff.
+    -> Yeah...
+      You: Yeah...
+      You: But I think it's worth looking around for one last time.
+  -> Heck yeah!
+    Kaito: Oh dang! Try to beat me then.
+  Kaito: Hang on, let me finish this game first.
+  Kaito: Whoa! I got a {$KaitoScore}! Try and beat me!
+  <<set $kaito_interaction_times = 1>>
+<<elseif $kaito_interaction_times == 1 and $KaitoScore > $PlayerScore>>
+  Kaito: Ha, I guess I'm still the best at Plasteroids.
+<<elseif $kaito_interaction_times == 1 and $KaitoScore < $PlayerScore>>
+  Kaito: Wow, you really managed to beat me.
+  Kaito: ...
+  Kaito: Maybe I should take a break.
+  -> Go touch some grass.
+    You: Go touch some grass.
+    Kaito: Ha! Sure.
+    Kaito: Maybe I'll go to the park.
+  -> I'm going to the park later.
+    You: I'm going to the park later.
+    You: Would you like to join me?
+    Kaito: Hmm. That sounds nice. Maybe I'll join you there.
+  You: See you there!
+  <<TalkedToKaito KaitoTrigger>>
+  <<set $kaito_interaction_times = 2>>
+<<elseif $kaito_interaction_times == 2>>
+  Kaito: See you at the park, man.
+
+// so here there should be a trigger at the door of the arcade where he moves to the park or smth
+// i'll add the rest of the next once that trigger is in place
+
+<<endif>>
+
+===

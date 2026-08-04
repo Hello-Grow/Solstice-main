@@ -1,0 +1,17 @@
+﻿title: Window
+---
+<<declare $window_interaction_count = 0>>
+<<if $window_interaction_count == 0>>
+ You looked out the window to see the sun setting. 
+ You thought to yourself how a better view may be possible with the time you have left.
+ <<set $window_interaction_count+=1>>
+<<elseif $window_interaction_count == 1>>
+ The wind brushes against your face.
+ The fresh breeze feels soft, almost comforting.
+ You think about going outside.
+
+ <<set $window_interaction_count+=1>>
+<<else>>
+ You think about going outside.
+<<endif>>
+===

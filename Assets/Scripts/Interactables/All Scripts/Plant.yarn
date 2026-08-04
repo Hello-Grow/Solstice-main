@@ -1,0 +1,24 @@
+﻿title: Plant
+---
+<<declare $plant_interaction_times = 0>>
+<<declare $has_tomatoes = false>>
+
+<<if $plant_interaction_times == 0>>
+  It's a plant!
+  To this day, you don't know what type of plant it is.
+  Yet somehow, it's still alive.
+  <<set $plant_interaction_times = 1 >>
+<<elseif $plant_interaction_times == 1 and $plantLady_interaction_times >= 1>>
+  It's a plant!
+  You: Hmm, maybe I can gift this to Haruka?
+  Pick up plant?
+  -> Yes
+    <<set $has_tomatoes = true>>
+    <<Pickup PottedPlant>>
+  -> No
+  <<set $plant_interaction_times = 2>>
+<<else>>
+  It's a plant!
+<<endif>>
+
+===

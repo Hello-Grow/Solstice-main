@@ -1,0 +1,13 @@
+﻿title: Bench
+---
+<<declare $current_time = 0>>
+<<if $current_time<30>>
+ There is a bench.
+ Sit?
+ -> Yes
+  <<SitOnBench Bench>>
+ -> No
+<<else>>
+ The time isn't right to watch the sunset.
+<<endif>>
+===

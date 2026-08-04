@@ -1,0 +1,10 @@
+title: ArcadeReceptionist
+---
+You: Hi! Can I buy some tokens?
+Ren: Sure! You know what, we actually won't be needing these anymore. Just take as many as you need.
+-> 1
+-> 10
+-> 9999
+You: Cool!
+
+===

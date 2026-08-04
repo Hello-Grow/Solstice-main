@@ -1,0 +1,17 @@
+﻿title: Radio
+---
+Player: Let's see what is on the radio.
+
+-> Play Music
+    <<play RadioApartment>>
+    Player: Now that's a good beat!
+-> Stop Music
+    <<stop RadioApartment>>
+    Player: Ah, peace and quiet.
+-> Next Song
+    <<next RadioApartment>>
+    Player: Let's skip this one.
+-> Previous Song
+    <<back RadioApartment>>
+    Player: Wait, go back to that last track.
+===

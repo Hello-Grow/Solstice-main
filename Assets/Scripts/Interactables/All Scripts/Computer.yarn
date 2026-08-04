@@ -1,0 +1,18 @@
+﻿title: Computer
+---
+<<declare $computer_state = 0>>
+
+<<if $computer_state == 0>>
+    Your computer. 
+    The news channel continues to play. You wonder why the reporters still work after the recent news. 
+    <<set $computer_state = 1>>
+<<elseif $computer_state == 1>>
+    You swiftly changed to another video.
+    The familiar sounds of an afternoon cooking show fill your room. 
+    You feel content.
+    <<set $computer_state = 2>>
+<<else>>
+    <<TurnOffComputer ApartmentComputer>>
+    You turn the computer off.
+<<endif>>
+===

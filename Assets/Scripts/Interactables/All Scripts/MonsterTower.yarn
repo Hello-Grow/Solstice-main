@@ -1,0 +1,19 @@
+title: MonsterTower
+---
+<<declare $monster_drinks_in_tower = 0>>
+<<declare $monster_inventory_count = 0>>
+<<if $monster_drinks_in_tower == 0>>
+ Your prized possession. One conveniently energy-drink shaped spaces lay at the top. 
+ <<if $monster_inventory_count > 0>>
+  Place the empty can?
+  -> Yes
+   <<PlaySound InteractionManager "Monster">>
+   <<PlaceMonster mMonsterTower>>
+   You placed the empty can into its rightful slot. Something about this action filled you with pride.
+   Your life goal has been accomplished.
+  -> No
+  <<endif>>
+<<else>>
+ Your life goal has been accomplished.
+<<endif>>
+===

@@ -1,0 +1,18 @@
+﻿title: Papers
+---
+<<declare $papers_state = 0>>
+
+<<if $papers_state == 0>>
+    You picked up the papers to do work…
+    …And came to your senses and put them down.
+    <<set $papers_state = 1>>
+<<elseif $papers_state == 1>>
+    You pick them up again, with a drive that could light the heavens…
+    …And dropped them back on the table.
+    <<set $papers_state = 2>>
+<<else>>
+    <<PlaySound InteractionManager "Paper Scatter">>
+    The papers scattered in a mess. 
+    You don't feel like picking them up again.
+<<endif>>
+===

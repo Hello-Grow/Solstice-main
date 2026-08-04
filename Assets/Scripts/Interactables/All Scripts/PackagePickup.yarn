@@ -1,0 +1,15 @@
+﻿title: PackagePickup
+---
+<<declare $package_pickup_interaction_times = 0>>
+<<if $package_pickup_interaction_times==0>>
+ A locker for package pickups.
+ You carefully check for any surprise packages, despite having not ordered anything.
+ Despite your hopes and dreams, the box remains empty.
+ <<set $package_pickup_interaction_times = 1>>
+<<elseif $package_pickup_interaction_times==1>>
+ You stick your hand in again, surely if you try again there could be something.
+ <<set $package_pickup_interaction_times = 2>>
+<<else>>
+ The locker is empty.
+<<endif>>
+===

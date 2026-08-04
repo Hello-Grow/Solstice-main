@@ -1,0 +1,13 @@
+﻿title: PitchPosters
+---
+<<declare $pitch_posters_interaction_times = 0>>
+<<if $pitch_posters_interaction_times==0>>
+ Posters of “upcoming” games.
+ You once asked the arcade person when they were coming.
+ ...2 years ago.
+
+ <<set $pitch_posters_interaction_times = 1>>
+<<else>>
+ Posters!
+<<endif>>
+===
