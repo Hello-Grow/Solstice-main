@@ -28481,7 +28481,7 @@ Transform:
   m_GameObject: {fileID: 154099857}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 6.0493, y: -3.72, z: -17.8638}
+  m_LocalPosition: {x: 6.0493, y: -3.72, z: -19.97}
   m_LocalScale: {x: 1.3192562, y: 1.6100794, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -82432,7 +82432,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.46875, y: 3.03125, z: 0.2}
+  m_Size: {x: 1.97, y: 3.03125, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &491918023
 GameObject:
@@ -132693,7 +132693,7 @@ GameObject:
   - component: {fileID: 851370540}
   - component: {fileID: 851370539}
   m_Layer: 0
-  m_Name: Spot Light (1)
+  m_Name: hi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147878,11 +147878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1575fbe5823434ba2a919748f86520e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
-  player: {fileID: 0}
-  smoothSpeed: 0.125
-  xOffset: 0
-  yOffset: 0
-  zMoveSpeed: 3
 --- !u!1 &961779380
 GameObject:
   m_ObjectHideFlags: 0
